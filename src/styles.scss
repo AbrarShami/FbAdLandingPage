@@ -1,0 +1,303 @@
+$bg-dark: #081221;
+$primary: #4f80ff;
+$primary-soft: #e9efff;
+$text-main: #1a2233;
+$text-muted: #5b6476;
+$card-border: #e4e9f2;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: $text-main;
+  background: #f7f9fc;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+.section-header {
+  .section-badge {
+    display: inline-block;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    background: $primary-soft;
+    color: $primary;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: $text-muted;
+  }
+}
+
+.hero-section {
+  background: linear-gradient(145deg, #0a1528, #162949 55%, #1f3a67);
+  color: #fff;
+  padding: 5.5rem 0 4.5rem;
+
+  .hero-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 999px;
+    padding: 0.4rem 0.85rem;
+    font-size: 0.85rem;
+    margin-bottom: 1.25rem;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 5vw, 3.3rem);
+    line-height: 1.15;
+    margin-bottom: 1.25rem;
+  }
+
+  p {
+    max-width: 680px;
+    color: #cedaf2;
+    margin-bottom: 1.75rem;
+  }
+
+  .hero-panel {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 20px;
+    padding: 1.5rem;
+    backdrop-filter: blur(6px);
+
+    h5 {
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 1rem;
+      color: #dce6ff;
+
+      li + li {
+        margin-top: 0.55rem;
+      }
+    }
+  }
+}
+
+.section-block {
+  padding: 5rem 0;
+
+  &.alt-bg {
+    background: #f0f4fb;
+  }
+}
+
+.btn-primary-custom {
+  background: $primary;
+  border: none;
+  border-radius: 10px;
+  padding: 0.72rem 1.3rem;
+  font-weight: 700;
+
+  &:hover,
+  &:focus {
+    background: #3d6de9;
+  }
+}
+
+.btn-outline-custom {
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  color: #fff;
+
+  &:hover,
+  &:focus {
+    background: rgba(255, 255, 255, 0.16);
+    color: #fff;
+  }
+}
+
+.process-card,
+.feature-card,
+.plan-card,
+.quote-card,
+.case-card,
+.summary-box,
+.apply-card {
+  border: 1px solid $card-border;
+  border-radius: 18px;
+  box-shadow: 0 10px 35px rgba(11, 30, 66, 0.06);
+}
+
+.process-card {
+  text-align: center;
+  padding: 1.5rem;
+
+  .step-number {
+    display: inline-block;
+    font-weight: 900;
+    color: $primary;
+    margin-bottom: 0.85rem;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.feature-card,
+.plan-card,
+.quote-card,
+.case-card {
+  padding: 1.5rem;
+
+  p,
+  span,
+  li {
+    color: $text-muted;
+  }
+}
+
+.plan-card {
+  h3 {
+    margin: 0.3rem 0 0.9rem;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 1.1rem;
+
+    li + li {
+      margin-top: 0.4rem;
+    }
+  }
+}
+
+.quote-card {
+  p {
+    font-size: 1.02rem;
+  }
+
+  h6 {
+    margin-bottom: 0.2rem;
+  }
+}
+
+.case-card {
+  span {
+    font-size: 0.86rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+}
+
+.custom-accordion .accordion-item {
+  border: 1px solid $card-border;
+  border-radius: 12px;
+  overflow: hidden;
+
+  & + .accordion-item {
+    margin-top: 0.75rem;
+  }
+}
+
+.summary-box {
+  background: #fff;
+  padding: 2rem;
+  text-align: center;
+
+  p {
+    margin: 0;
+    color: $text-muted;
+  }
+}
+
+.cta-section {
+  text-align: center;
+  background: $bg-dark;
+  color: #fff;
+  padding: 4rem 0;
+
+  p {
+    color: #c6d4f0;
+    margin-bottom: 1.25rem;
+  }
+}
+
+.site-footer {
+  padding: 1.3rem 0;
+  background: #070f1d;
+  color: #9eb0d5;
+  text-align: center;
+
+  p {
+    margin: 0;
+  }
+}
+
+.apply-page {
+  min-height: 100vh;
+  padding: 4rem 0;
+  background: linear-gradient(180deg, #f4f7fd, #ebf1fc);
+
+  .apply-card {
+    background: #fff;
+    padding: 2rem;
+
+    h1 {
+      margin-top: 0.8rem;
+      margin-bottom: 0.7rem;
+      font-size: clamp(1.7rem, 4vw, 2.4rem);
+    }
+
+    p {
+      color: $text-muted;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-label {
+      font-weight: 600;
+      color: #2a344a;
+    }
+
+    .form-control,
+    .form-select {
+      min-height: 46px;
+      border-radius: 10px;
+      border-color: #d3dced;
+
+      &:focus {
+        border-color: #91a9e9;
+        box-shadow: 0 0 0 0.2rem rgba(79, 128, 255, 0.15);
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .section-block {
+    padding: 3.7rem 0;
+  }
+
+  .hero-section {
+    padding: 4rem 0 3.4rem;
+  }
+
+  .apply-page .apply-card {
+    padding: 1.35rem;
+  }
+}
